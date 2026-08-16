@@ -1,3 +1,4 @@
+// Production API URL
 const API_URL = window.location.origin;
 
 
