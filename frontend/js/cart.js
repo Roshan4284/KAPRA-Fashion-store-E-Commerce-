@@ -9,7 +9,7 @@
     // ============================================================
 
     const CART_API_URL =
-        "http://127.0.0.1:8000";
+        window.location.origin;
 
 
     let cart = [];
