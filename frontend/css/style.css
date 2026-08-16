@@ -1,0 +1,1172 @@
+/* KAPRA style.css - corrected hero image rules */
+
+/* ============================================================
+   KAPRA - GLOBAL
+============================================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #222222;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* ============================================================
+   NAVBAR
+============================================================ */
+
+.kapra-navbar {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.kapra-nav-main {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+
+/* ============================================================
+   KAPRA LOGO
+============================================================ */
+
+/* ============================================================
+   KAPRA LOGO
+============================================================ */
+
+.kapra-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 150px;
+    height: 60px;
+
+    background: #ffffff;
+
+    overflow: hidden;
+
+    flex-shrink: 0;
+}
+
+.kapra-logo-image {
+    width: 145px;
+    height: 55px;
+
+    object-fit: contain;
+
+    display: block;
+
+    opacity: 1;
+}
+
+/* ============================================================
+   SEARCH
+============================================================ */
+
+.kapra-search {
+    flex: 1;
+
+    max-width: 600px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+
+    background: #f5f5f6;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 4px;
+
+    padding: 0 14px;
+}
+
+.kapra-search-icon {
+    margin-right: 10px;
+    font-size: 15px;
+}
+
+.kapra-search input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    font-size: 14px;
+    color: #333333;
+}
+
+.kapra-search input::placeholder {
+    color: #777777;
+}
+
+
+/* ============================================================
+   NAV ACTIONS
+============================================================ */
+
+.kapra-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: auto;
+}
+
+.kapra-action {
+    color: #222222;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    min-width: 50px;
+}
+
+.kapra-action:hover {
+    color: #ff3f6c;
+}
+
+.kapra-action-icon {
+    font-size: 19px;
+    margin-bottom: 2px;
+}
+
+
+/* ============================================================
+   LOGIN
+============================================================ */
+
+.kapra-login {
+    color: #222222;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.kapra-login:hover {
+    color: #ff3f6c;
+}
+
+
+/* ============================================================
+   REGISTER
+============================================================ */
+
+.kapra-register {
+    background: #ff3f6c;
+
+    color: #ffffff;
+
+    padding: 9px 16px;
+
+    border-radius: 3px;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.kapra-register:hover {
+    background: #e7335f;
+    color: #ffffff;
+}
+
+
+/* ============================================================
+   LOGOUT
+============================================================ */
+
+.kapra-logout {
+    border: 1px solid #222222;
+
+    background: #ffffff;
+
+    color: #222222;
+
+    padding: 7px 14px;
+
+    border-radius: 3px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.kapra-logout:hover {
+    background: #222222;
+    color: #ffffff;
+}
+
+
+/* ============================================================
+   CATEGORY NAVIGATION
+============================================================ */
+
+.kapra-category-bar {
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.kapra-categories {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 45px;
+
+    min-height: 44px;
+}
+
+.kapra-categories a {
+    color: #333333;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+
+    position: relative;
+
+    padding: 14px 0;
+}
+
+.kapra-categories a:hover {
+    color: #ff3f6c;
+}
+
+.kapra-categories a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 7px;
+
+    width: 0;
+    height: 2px;
+
+    background: #ff3f6c;
+
+    transition: width 0.2s ease;
+}
+
+.kapra-categories a:hover::after {
+    width: 100%;
+}
+
+.kapra-categories .kapra-sale {
+    color: #ff3f6c;
+}
+
+
+/* ============================================================
+   PROMO BAR
+============================================================ */
+
+.kapra-promo {
+    background: #282c34;
+
+    color: #ffffff;
+
+    text-align: center;
+
+    padding: 10px 15px;
+
+    font-size: 13px;
+}
+
+.kapra-promo strong {
+    color: #ffcc00;
+}
+
+
+/* ============================================================
+   HERO
+============================================================ */
+
+/* ============================================================
+   KAPRA HERO FASHION
+============================================================ */
+
+/* ============================================================
+   KAPRA HERO SECTION
+============================================================ */
+
+.kapra-hero {
+    width: 100%;
+    background: #f8f8f8;
+
+    display: flex;
+    align-items: stretch;
+
+    overflow: hidden;
+}
+
+
+/* ============================================================
+   HERO IMAGE CONTAINER
+============================================================ */
+
+.kapra-hero-image {
+    width: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: #f5f5f5;
+}
+
+
+/* ============================================================
+   HERO IMAGE
+============================================================ */
+
+.kapra-hero-image img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+
+/* ============================================================
+   HERO CONTENT
+============================================================ */
+
+.kapra-hero-content {
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 70px 5%;
+}
+
+
+/* ============================================================
+   HERO TITLE
+============================================================ */
+
+.kapra-hero-content h1 {
+    font-size: 52px;
+    font-weight: 500;
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+
+    color: #222222;
+}
+
+
+/* ============================================================
+   HERO SUBTITLE
+============================================================ */
+
+.kapra-hero-content p {
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    color: #222222;
+
+    margin-bottom: 28px;
+}
+
+
+/* ============================================================
+   HERO BUTTONS
+============================================================ */
+
+.kapra-hero-buttons {
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+.kapra-hero-buttons a {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 50px;
+
+    padding: 0 28px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    border-radius: 4px;
+}
+
+
+/* SHOP NOW */
+
+.kapra-shop-btn {
+    background: #222222;
+
+    color: #ffffff;
+}
+
+
+.kapra-shop-btn:hover {
+    background: #000000;
+
+    color: #ffffff;
+}
+
+
+/* EXPLORE */
+
+.kapra-explore-btn {
+    background: #ffffff;
+
+    color: #222222;
+
+    border: 1px solid #cccccc;
+}
+
+
+.kapra-explore-btn:hover {
+    background: #f5f5f5;
+
+    color: #222222;
+}
+
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media (max-width: 991px) {
+
+    .kapra-hero {
+        flex-direction: column;
+    }
+
+
+    .kapra-hero-image {
+        width: 100%;
+    }
+
+
+    .kapra-hero-image img {
+        width: 100%;
+        height: auto;
+    }
+
+
+    .kapra-hero-content {
+        width: 100%;
+
+        padding: 50px 30px;
+    }
+
+
+    .kapra-hero-content h1 {
+        font-size: 42px;
+    }
+
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 576px) {
+
+    .kapra-hero-content {
+        padding: 40px 20px;
+    }
+
+
+    .kapra-hero-content h1 {
+        font-size: 34px;
+    }
+
+
+    .kapra-hero-content p {
+        font-size: 15px;
+    }
+
+
+    .kapra-hero-buttons {
+        flex-direction: column;
+    }
+
+
+    .kapra-hero-buttons a {
+        width: 100%;
+    }
+
+}
+/* ============================================================
+   HERO BUTTONS
+============================================================ */
+
+.kapra-hero-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+.kapra-btn-primary {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    background: #222222;
+
+    color: #ffffff;
+
+    padding: 13px 24px;
+
+    border-radius: 4px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+.kapra-btn-primary:hover {
+    background: #ff3f6c;
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+.kapra-btn-secondary {
+    display: inline-flex;
+
+    align-items: center;
+
+    background: #ffffff;
+
+    color: #222222;
+
+    border: 1px solid #cccccc;
+
+    padding: 12px 23px;
+
+    border-radius: 4px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.kapra-btn-secondary:hover {
+    border-color: #222222;
+    color: #222222;
+}
+
+
+/* ============================================================
+   HERO IMAGE - FULL IMAGE VISIBLE
+============================================================ */
+
+.kapra-hero-image {
+    width: 50%;
+    height: auto;
+
+    margin-left: 30px;
+
+    overflow: hidden;
+
+    border-radius: 5px;
+
+    background: #eeeeee;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.kapra-hero-image img {
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+/* ============================================================
+   COMMON SECTION
+============================================================ */
+
+.kapra-section {
+    padding: 65px 0;
+}
+
+.kapra-products-section {
+    background: #fafafa;
+}
+
+
+/* ============================================================
+   SECTION HEADING
+============================================================ */
+
+.kapra-section-heading {
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+.kapra-section-heading span {
+    display: block;
+
+    color: #999999;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 6px;
+}
+
+.kapra-section-heading h2 {
+    margin: 0;
+
+    font-size: 30px;
+
+    font-weight: 750;
+
+    color: #222222;
+}
+
+.kapra-view-all {
+    color: #222222;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.kapra-view-all:hover {
+    color: #ff3f6c;
+}
+
+
+/* ============================================================
+   CATEGORY CARDS
+============================================================ */
+
+.kapra-category-card {
+    display: block;
+
+    color: #222222;
+
+    text-align: center;
+
+    transition: transform 0.2s ease;
+}
+
+.kapra-category-card:hover {
+    color: #222222;
+
+    transform: translateY(-5px);
+}
+
+
+/* CATEGORY IMAGE */
+
+.kapra-category-image {
+    width: 100%;
+    height: 220px;
+
+    overflow: hidden;
+
+    background: #f5f5f5;
+
+    margin-bottom: 15px;
+
+    border-radius: 4px;
+
+    position: relative;
+}
+
+.kapra-category-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.4s ease;
+}
+
+.kapra-category-card:hover
+.kapra-category-image img {
+    transform: scale(1.05);
+}
+
+
+/* CATEGORY TEXT */
+
+.kapra-category-card h5 {
+    margin: 0 0 5px;
+
+    font-size: 16px;
+
+    font-weight: 700;
+}
+
+.kapra-category-card p {
+    margin: 0;
+
+    color: #888888;
+
+    font-size: 12px;
+}
+
+
+/* ============================================================
+   PRODUCTS
+============================================================ */
+
+#homeProducts {
+    min-height: 100px;
+}
+
+#homeProducts .card {
+    border: none;
+
+    background: #ffffff;
+
+    border-radius: 5px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+#homeProducts .card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+#homeProducts .card img {
+    width: 100%;
+    height: 280px;
+
+    object-fit: cover;
+}
+
+#homeProducts .card-body {
+    padding: 18px;
+}
+
+#homeProducts .card-title {
+    font-size: 15px;
+
+    font-weight: 700;
+
+    margin-bottom: 8px;
+}
+
+#homeProducts .card-text {
+    color: #777777;
+
+    font-size: 13px;
+}
+
+
+/* ============================================================
+   BENEFITS
+============================================================ */
+
+.kapra-benefits {
+    background: #ffffff;
+
+    border-top: 1px solid #eeeeee;
+
+    border-bottom: 1px solid #eeeeee;
+
+    padding: 32px 0;
+}
+
+.kapra-benefit {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    min-height: 65px;
+}
+
+.kapra-benefit > i {
+    font-size: 28px;
+
+    color: #ff3f6c;
+}
+
+.kapra-benefit h6 {
+    margin: 0 0 4px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+.kapra-benefit p {
+    margin: 0;
+
+    color: #888888;
+
+    font-size: 12px;
+}
+
+
+/* ============================================================
+   FOOTER
+============================================================ */
+
+.kapra-footer {
+    background: #202124;
+
+    color: #ffffff;
+
+    padding: 55px 0 25px;
+}
+
+.kapra-footer h3 {
+    margin-bottom: 15px;
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+.kapra-footer h6 {
+    margin-bottom: 18px;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+}
+
+.kapra-footer p {
+    max-width: 320px;
+
+    color: #aaaaaa;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+.kapra-footer a {
+    display: block;
+
+    color: #aaaaaa;
+
+    font-size: 13px;
+
+    margin-bottom: 10px;
+
+    transition: 0.2s ease;
+}
+
+.kapra-footer a:hover {
+    color: #ffffff;
+}
+
+
+/* ============================================================
+   SOCIAL
+============================================================ */
+
+.kapra-social {
+    display: flex;
+
+    gap: 12px;
+}
+
+.kapra-social a {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 34px;
+
+    border: 1px solid #555555;
+
+    border-radius: 50%;
+
+    margin: 0;
+}
+
+.kapra-social a:hover {
+    background: #ff3f6c;
+
+    border-color: #ff3f6c;
+}
+
+
+/* ============================================================
+   FOOTER BOTTOM
+============================================================ */
+
+.kapra-footer hr {
+    border-color: #444444;
+
+    margin: 35px 0 20px;
+}
+
+.kapra-footer-bottom {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    color: #888888;
+
+    font-size: 11px;
+}
+
+
+/* ============================================================
+   GENERAL BUTTON
+============================================================ */
+
+.btn-dark {
+    background: #222222;
+
+    border-color: #222222;
+}
+
+.btn-dark:hover {
+    background: #ff3f6c;
+
+    border-color: #ff3f6c;
+}
+
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media (max-width: 991px) {
+
+    .kapra-nav-main {
+        flex-wrap: wrap;
+
+        padding: 12px 0;
+    }
+
+    .kapra-search {
+        order: 3;
+
+        flex-basis: 100%;
+
+        max-width: 100%;
+    }
+
+    .kapra-actions {
+        margin-left: auto;
+
+        gap: 10px;
+    }
+
+    .kapra-category-bar {
+        overflow-x: auto;
+    }
+
+    .kapra-categories {
+        justify-content: flex-start;
+
+        gap: 25px;
+
+        min-width: max-content;
+    }
+
+    .kapra-hero {
+        padding: 45px 0;
+    }
+
+    .kapra-hero-image {
+        width: 100%;
+        margin-left: 0;
+
+        margin-top: 40px;
+
+        height: auto;
+    }
+
+    .kapra-section {
+        padding: 50px 0;
+    }
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 576px) {
+
+    .kapra-logo {
+        width: 110px;
+        height: 55px;
+
+        min-width: 110px;
+    }
+
+    .kapra-logo-image {
+        width: 110px;
+        height: 55px;
+    }
+
+    .kapra-action span:last-child {
+        display: none;
+    }
+
+    .kapra-action-icon {
+        font-size: 20px;
+    }
+
+    .kapra-logout {
+        font-size: 11px;
+
+        padding: 6px 9px;
+    }
+
+    .kapra-login {
+        font-size: 12px;
+    }
+
+    .kapra-register {
+        padding: 7px 10px;
+
+        font-size: 11px;
+    }
+
+    .kapra-promo {
+        font-size: 11px;
+
+        padding: 8px;
+    }
+
+    .kapra-hero {
+        padding: 40px 0;
+    }
+
+    .kapra-hero-title {
+        font-size: 44px;
+
+        letter-spacing: -1px;
+    }
+
+    .kapra-hero-text {
+        font-size: 14px;
+    }
+
+    .kapra-hero-image {
+        width: 100%;
+        height: auto;
+
+        margin-top: 30px;
+    }
+
+    .kapra-section {
+        padding: 45px 0;
+    }
+
+    .kapra-section-heading {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .kapra-section-heading h2 {
+        font-size: 25px;
+    }
+
+    .kapra-category-image {
+        height: 150px;
+    }
+
+    #homeProducts .card img {
+        height: 220px;
+    }
+
+    .kapra-footer-bottom {
+        flex-direction: column;
+
+        gap: 8px;
+    }
+}

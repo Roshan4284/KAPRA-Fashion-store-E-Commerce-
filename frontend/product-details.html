@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>KAPRA - Product Details</title>
+
+
+    <!-- =====================================================
+         BOOTSTRAP
+    ====================================================== -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         BOOTSTRAP ICONS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+
+    <!-- =====================================================
+         KAPRA CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="/static/css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/static/css/product-details.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<div id="navbar"></div>
+
+
+<!-- =========================================================
+     PRODUCT PAGE
+========================================================= -->
+
+<main class="product-page">
+
+
+    <!-- =====================================================
+         LOADING
+    ====================================================== -->
+
+    <div
+        id="loading"
+        class="product-loading"
+    >
+
+        <div
+            class="spinner-border"
+            role="status"
+            aria-hidden="true"
+        ></div>
+
+        <p class="mt-2">
+            Loading product...
+        </p>
+
+    </div>
+
+
+    <!-- =====================================================
+         ERROR
+    ====================================================== -->
+
+    <div
+        id="errorMessage"
+        class="alert alert-danger product-error d-none"
+        role="alert"
+    ></div>
+
+
+    <!-- =====================================================
+         PRODUCT CONTENT
+    ====================================================== -->
+
+    <section
+        id="productDetails"
+        class="product-details d-none"
+    >
+
+
+        <!-- =================================================
+             BREADCRUMB
+        ================================================== -->
+
+        <div class="product-breadcrumb">
+
+            <a href="/">
+                <i class="bi bi-house"></i>
+            </a>
+
+            <i class="bi bi-chevron-right"></i>
+
+            <a href="/static/products.html">
+                Products
+            </a>
+
+            <i class="bi bi-chevron-right"></i>
+
+            <span id="breadcrumbProductName">
+                Product
+            </span>
+
+        </div>
+
+
+        <!-- =================================================
+             MAIN PRODUCT AREA
+        ================================================== -->
+
+        <div class="product-main-grid">
+
+
+            <!-- =================================================
+                 PRODUCT IMAGE
+            ================================================== -->
+
+            <div class="product-gallery">
+
+
+                <!-- THUMBNAIL -->
+
+                <div
+                    id="productThumbnails"
+                    class="product-thumbnails"
+                >
+
+                    <button
+                        type="button"
+                        class="product-thumbnail active"
+                        data-image=""
+                        aria-label="Product image"
+                    >
+
+                        <img
+                            id="thumbnailMain"
+                            src="/static/images/tshirts.jpg"
+                            alt="Product"
+                        >
+
+                    </button>
+
+                </div>
+
+
+                <!-- MAIN IMAGE -->
+
+                <div class="product-main-image-wrapper">
+
+                    <img
+                        id="productImage"
+                        src="/static/images/tshirts.jpg"
+                        alt="Product"
+                        class="product-main-image"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PRODUCT INFORMATION
+            ================================================== -->
+
+            <div class="product-information">
+
+
+                <!-- PRODUCT NAME -->
+
+                <h1
+                    id="productName"
+                    class="product-title"
+                ></h1>
+
+
+                <!-- PRICE -->
+
+                <div
+                    id="productPrice"
+                    class="product-price"
+                ></div>
+
+
+                <hr class="product-divider">
+
+
+                <!-- =================================================
+                     PRODUCT OPTIONS
+                ================================================== -->
+
+                <div class="product-options">
+
+
+                    <!-- SIZE -->
+
+                    <div class="product-option">
+
+                        <strong>
+                            Size:
+                        </strong>
+
+                        <span id="productSize">
+                            N/A
+                        </span>
+
+                    </div>
+
+
+                    <!-- COLOR -->
+
+                    <div class="product-option">
+
+                        <strong>
+                            Color:
+                        </strong>
+
+                        <span id="productColor">
+                            N/A
+                        </span>
+
+                    </div>
+
+
+                    <!-- STOCK -->
+
+                    <div class="product-option">
+
+                        <strong>
+                            Stock:
+                        </strong>
+
+                        <span id="productStock">
+                            0
+                        </span>
+
+                        <span
+                            id="stockStatus"
+                            class="stock-status"
+                        ></span>
+
+                    </div>
+
+                </div>
+
+
+                <hr class="product-divider">
+
+
+                <!-- =================================================
+                     QUANTITY
+                ================================================== -->
+
+                <div class="quantity-section">
+
+                    <label
+                        for="quantity"
+                        class="quantity-label"
+                    >
+                        Quantity
+                    </label>
+
+
+                    <div class="quantity-control">
+
+                        <button
+                            type="button"
+                            id="decreaseQuantity"
+                            class="quantity-button"
+                            aria-label="Decrease quantity"
+                        >
+                            −
+                        </button>
+
+
+                        <input
+                            type="number"
+                            id="quantity"
+                            value="1"
+                            min="1"
+                            readonly
+                            aria-label="Quantity"
+                        >
+
+
+                        <button
+                            type="button"
+                            id="increaseQuantity"
+                            class="quantity-button"
+                            aria-label="Increase quantity"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     ACTION BUTTONS
+                ================================================== -->
+
+                <div class="product-actions">
+
+
+                    <!-- ADD TO CART -->
+
+                    <button
+                        id="addToCartButton"
+                        type="button"
+                        class="product-action-button add-cart-button"
+                    >
+
+                        <i class="bi bi-cart3"></i>
+
+                        <span>
+                            Add to Cart
+                        </span>
+
+                    </button>
+
+
+                    <!-- CONTINUE SHOPPING -->
+
+                    <a
+                        href="/static/products.html"
+                        class="product-action-button continue-shopping-button"
+                    >
+
+                        <i class="bi bi-bag"></i>
+
+                        <span>
+                            Continue Shopping
+                        </span>
+
+                    </a>
+
+                </div>
+
+
+                <!-- =================================================
+                     CART MESSAGE
+                ================================================== -->
+
+                <div
+                    id="cartMessage"
+                    class="cart-message"
+                ></div>
+
+
+                <!-- =================================================
+                     BENEFITS
+                ================================================== -->
+
+                <div class="product-benefits">
+
+
+                    <!-- SECURE PAYMENT -->
+
+                    <div class="benefit-item">
+
+                        <div class="benefit-icon">
+
+                            <i class="bi bi-shield-check"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Secure Payment
+                            </strong>
+
+                            <span>
+                                100% Secure
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FREE SHIPPING -->
+
+                    <div class="benefit-item">
+
+                        <div class="benefit-icon">
+
+                            <i class="bi bi-truck"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Free Shipping
+                            </strong>
+
+                            <span>
+                                On orders above ₹499
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- EASY RETURNS -->
+
+                    <div class="benefit-item">
+
+                        <div class="benefit-icon">
+
+                            <i class="bi bi-arrow-counterclockwise"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Easy Returns
+                            </strong>
+
+                            <span>
+                                7 days return
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             DESCRIPTION
+        ================================================== -->
+
+        <section class="product-description-section">
+
+            <div class="description-tabs">
+
+                <button
+                    type="button"
+                    class="description-tab active"
+                >
+                    Description
+                </button>
+
+                <button
+                    type="button"
+                    class="description-tab"
+                >
+                    Additional Information
+                </button>
+
+                <button
+                    type="button"
+                    class="description-tab"
+                >
+                    Reviews (0)
+                </button>
+
+            </div>
+
+
+            <div class="description-content">
+
+                <p id="productDescription"></p>
+
+            </div>
+
+        </section>
+
+
+    </section>
+
+</main>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script src="/static/js/navbar.js?v=2"></script>
+
+<script src="/static/js/product-details.js?v=31"></script>
+
+
+</body>
+
+</html>
